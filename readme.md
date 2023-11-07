@@ -7,6 +7,21 @@ Make a plan:
 Week1: discuss about greyscale classifying to work
 Make a clear design about the challenges and make the actual hypothesis of our investigation.
 
+1.what we can do: like how many greyscale classifications can read
+
+
+
+2.what we will do to achieve it:
+
+
+
+3.limits: like seperated by a distance or limited to some size
+
+
+
+
+
+
 
 
 
