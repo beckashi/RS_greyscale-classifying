@@ -52,3 +52,6 @@ Week 5: finish writing report.
 >>>You outline measuring the effect of changing the lighting conditions and I can see you have given good thought to the different scenarios to test under
 >>>In your report, this means your introduction will probably include "preliminary results", because discussing the measurable impact of lighting would help the reader to understand the nature of the problem you are investigating.
 >>>you can then state how you predict an improvement can be made.   Therefore, to produce a more interesting of work, you then want to predict how to make it better, and then evidence whether this was successful or not
+>>>Your proposal is about a calibration method for the line sensors, or implementing some kind of filter for the sensors. Using the task of line following is a good and reasonable way to evaluate your system.
+>>>An important aspect will be to keep the motion/line follow controller always the same - otherwise we won't know if a change in performance is from your calibration/filtering, or from a change of controller.
+>>>
