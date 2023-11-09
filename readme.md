@@ -29,4 +29,26 @@ Week 4: Focus on report
 Week 5: finish writing report.
 (12.4: finish the whole report)
 
+**Hi,some immportant points from Dr paul's feedback**
+-Your proposal could have two distinct elements.
+  ...One is to find or locate an IR source in the environment
+  ...whilst the other could be about classifying different surfaces by their tone/darkness (greyscale).
 
+  *the robot can detect heat sources
+  *he robot can detect candle flames (like a tealight candle) - however I think it is detecting just a narrow band of IR being emitted, not necessarily heat.
+  *Therefore, a good source of IR to use is another robot, with it's plastic body shell removed.  Where your proposal has a few different possible tasks, **my recommendation is to quickly select just one to investigate**
+  
+........................................so this is the proposal he want us to work on **Surface discrimination** ......................................................................
+>>> My recommendation here would be to quickly make an implementation of this system and evaluate it, so that you can then decide how it could be improved further.  This improvement will be the actual hypothesis of your investigation.
+>>> >>>> We can imagine that filtering some noise on the sensors, or a way to combine all 5 line sensors, would be an improvement.
+>>> >>>>
+>>> >>>> >>>>you could investigate some simple filters like an exponential moving average, or more statistical methods like inverse-variance weighting
+>>> >>>> >>>>our robot should be able to collect many samples quickly enough to apply something like this on every loop().
+>>> >>>> >>>>
+>>> >>>> >>>>Therefore, you could hypothesise when the greyscale classifying will begin to break, and then make an experiment to measure if this is true.
+
+....................................................................**Line sensor calibration/filtering**............................................................................
+
+>>>You outline measuring the effect of changing the lighting conditions and I can see you have given good thought to the different scenarios to test under
+>>>In your report, this means your introduction will probably include "preliminary results", because discussing the measurable impact of lighting would help the reader to understand the nature of the problem you are investigating.
+>>>you can then state how you predict an improvement can be made.   Therefore, to produce a more interesting of work, you then want to predict how to make it better, and then evidence whether this was successful or not
