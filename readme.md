@@ -19,6 +19,8 @@ The dataTest.csv is stored under the repo called beckashi/dataStore/.
 
 3. plotResult.ipynb: https://colab.research.google.com/drive/1Fg0-xJ_PaPvFWkQ5SWlP1DjHU3JsP7bi
 
+next, should collect more data from black to white and then plot it
+
 ## plan:  ##
 Week1: discuss about greyscale classifying to work. 
 
