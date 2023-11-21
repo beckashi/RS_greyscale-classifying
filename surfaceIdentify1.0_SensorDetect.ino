@@ -76,29 +76,50 @@ void loop() {
 }
 
 void reportResults() {
-
+    int j = 1;
       // experiment is over.
       while(1) {
             //stop motors
             //motors.stop(0,0);
 
             // print results.
-            for( int i = 0; i < 100; i++ ) {
+            for(j = 1; j < 5; j++ ) {
+              for( int i = 0; i < 50; i++ ) {
+                Serial.print( j ); Serial.print(",");
+                Serial.print( i ); Serial.print(",");
+                Serial.print("1"); 
+                Serial.print(",");
+                Serial.println(sensor1[i]);
 
-              Serial.print(sensor1[i]);
-              Serial.print(",");
-              Serial.print(sensor2[i]);
-              Serial.print(",");
-              Serial.print(sensor3[i]);
-              Serial.print(",");
-              Serial.print(sensor4[i]);
-              Serial.print(",");
-              Serial.println(sensor5[i]);
+                Serial.print( j ); Serial.print(",");
+                Serial.print( i ); Serial.print(",");
+                Serial.print("2");
+                Serial.print(",");
+                Serial.println(sensor2[i]);
 
+                Serial.print( j ); Serial.print(",");
+                Serial.print( i ); Serial.print(",");
+                Serial.print("3");
+                Serial.print(",");
+                Serial.println(sensor3[i]);
+
+                Serial.print( j ); Serial.print(",");
+                Serial.print( i ); Serial.print(",");
+                Serial.print("4");
+                Serial.print(",");
+                Serial.println(sensor4[i]);
+
+                Serial.print( j ); Serial.print(",");
+                Serial.print( i ); Serial.print(",");
+                Serial.print("5");
+                Serial.print(",");
+                Serial.println(sensor5[i]);
+
+              }
+
+              delay(3000);
             }
-
-            delay(1000);
-
+            delay(3000);
       }
 
 
