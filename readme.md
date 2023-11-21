@@ -10,7 +10,10 @@ Areas of greyscale must be seperated by a distance or limited to some size - wha
 
 The dataTest.csv is stored under the repo called beckashi/dataStore/.
 
-plotResult.ipynb: https://colab.research.google.com/drive/1Fg0-xJ_PaPvFWkQ5SWlP1DjHU3JsP7bi
+## Steps:  ##
+1. use surfaceIdentify1.0_SensorDetect.ino to produce the sensors data.
+2. paste the data to https://github.com/beckashi/dataStore/blob/main/dataTest.csv
+3. plotResult.ipynb: https://colab.research.google.com/drive/1Fg0-xJ_PaPvFWkQ5SWlP1DjHU3JsP7bi
 
 ## plan:  ##
 Week1: discuss about greyscale classifying to work. 
