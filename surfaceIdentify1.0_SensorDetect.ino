@@ -52,88 +52,91 @@ void setup() {
 
 
 void loop() {
-  while (1) {
-    for (int i = 1; i < 6; i++) {
+  
+  // while (1) {
+    for (int i = 0; i < 5; i++) {
       results[i] = lineSensors(i);
-      Serial.print(results[i]);
-      Serial.print(",");
+      // Serial.print(results[i]);
+      // Serial.print(",");
     }
-    Serial.println();
-    delay(10);
-  }
+    // Serial.println();
+    // delay(10);
+  // }
   // unsigned long trialTime = millis();
   // float trialTime_f = (float)trialTime;
   // for(int j = 0; j < 1000000; j++){
   // fprintf(fpt, "%f,%f,%f,%f,%f,%f\n", trialTime_f, results[1], results[2], results[3], results[4], results[5]);
 
-  sensor1[result_index] = lineSensors(1);
+  sensor1[result_index] = lineSensors(0);
   sensor2[result_index] = lineSensors(1);
-  sensor3[result_index] = lineSensors(1);
-  sensor4[result_index] = lineSensors(1);
-  sensor5[result_index] = lineSensors(1);
+  sensor3[result_index] = lineSensors(2);
+  sensor4[result_index] = lineSensors(3);
+  sensor5[result_index] = lineSensors(4);
 
   result_index += 1;
-
+  // Serial.println(result_index);
   if (result_index >= 100) {
-    reportResults();
+  reportResults();
   }
 }
 
 void reportResults() {
   int j = 1;
   // experiment is over.
-  while (1) {
+  // while (1) {
     //stop motors
     //motors.stop(0,0);
 
     // print results.
-    for (j = 1; j < 5; j++) {
-      for (int i = 0; i < 50; i++) {
-        Serial.print(j);
-        Serial.print(",");
-        Serial.print(i);
-        Serial.print(",");
-        Serial.print("1");
-        Serial.print(",");
-        Serial.println(sensor1[i]);
+  for (j = 1; j < 2; j++) {
+    for (int i = 0; i < 50; i++) {
+      Serial.print(j);
+      Serial.print(",");
+      Serial.print(i);
+      Serial.print(",");
+      Serial.print("1");
+      Serial.print(",");
+      Serial.println(sensor1[i]);
 
-        Serial.print(j);
-        Serial.print(",");
-        Serial.print(i);
-        Serial.print(",");
-        Serial.print("2");
-        Serial.print(",");
-        Serial.println(sensor2[i]);
+      Serial.print(j);
+      Serial.print(",");
+      Serial.print(i);
+      Serial.print(",");
+      Serial.print("2");
+      Serial.print(",");
+      Serial.println(sensor2[i]);
 
-        Serial.print(j);
-        Serial.print(",");
-        Serial.print(i);
-        Serial.print(",");
-        Serial.print("3");
-        Serial.print(",");
-        Serial.println(sensor3[i]);
+      Serial.print(j);
+      Serial.print(",");
+      Serial.print(i);
+      Serial.print(",");
+      Serial.print("3");
+      Serial.print(",");
+      Serial.println(sensor3[i]);
 
-        Serial.print(j);
-        Serial.print(",");
-        Serial.print(i);
-        Serial.print(",");
-        Serial.print("4");
-        Serial.print(",");
-        Serial.println(sensor4[i]);
+      Serial.print(j);
+      Serial.print(",");
+      Serial.print(i);
+      Serial.print(",");
+      Serial.print("4");
+      Serial.print(",");
+      Serial.println(sensor4[i]);
 
-        Serial.print(j);
-        Serial.print(",");
-        Serial.print(i);
-        Serial.print(",");
-        Serial.print("5");
-        Serial.print(",");
-        Serial.println(sensor5[i]);
-      }
-
-      delay(3000);
+      Serial.print(j);
+      Serial.print(",");
+      Serial.print(i);
+      Serial.print(",");
+      Serial.print("5");
+      Serial.print(",");
+      Serial.println(sensor5[i]);
     }
+
     delay(3000);
+    
   }
+  delay(4000);
+  result_index = 0;
+  // }
 }
 
 float lineSensors(int number) {
