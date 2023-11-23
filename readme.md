@@ -21,7 +21,7 @@ The dataTest.csv is stored under the repo called beckashi/dataStore/.
 
 4. finish the report: https://www.overleaf.com/project/655f47adc3d609059c955f57
 
-next, should collect more data from black to white and then plot it
+next, should add calibration and filter
 
 ## plan:  ##
 Week1: discuss about greyscale classifying to work. 
