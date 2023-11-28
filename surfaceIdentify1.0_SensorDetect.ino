@@ -53,6 +53,28 @@ void setup() {
 
 void loop() {
   
+  float reading_1 = lineSensors(0);
+  reading_1 = (reading_1 - 732.87) / 150.06;
+  Serial.print(reading_1);
+  float reading_2 = lineSensors(0);
+  reading_2 = (reading_2 - 340.39) / 214.43;
+  Serial.print(",");
+  Serial.print(reading_2);
+  float reading_3 = lineSensors(0);
+  reading_3 = (reading_3 - 264.92) / 210.17;
+  Serial.print(",");
+  Serial.print(reading_3);
+  float reading_4 = lineSensors(0);
+  reading_4 = (reading_4 - 318.28) / 209.47;
+  Serial.print(",");
+  Serial.print(reading_4);
+  float reading_5 = lineSensors(0);
+  reading_5 = (reading_5 - 585.57) / 206.37;
+  Serial.print(",");
+  Serial.println(reading_5);
+
+  return;
+
   // while (1) {
     for (int i = 0; i < 5; i++) {
       results[i] = lineSensors(i);
