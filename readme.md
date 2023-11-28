@@ -21,6 +21,9 @@ The dataTest.csv is stored under the repo called beckashi/dataStore/.
 
 4. finish the report: https://www.overleaf.com/project/655f47adc3d609059c955f57
 
+5. calibration: https://colab.research.google.com/drive/1BznLLeg_ZoFOAupowzx7jpG7byTPYcAp#scrollTo=uAQ71r-POWvB
+   
+
 next, should add calibration and filter
 
 ## Attentation ##
