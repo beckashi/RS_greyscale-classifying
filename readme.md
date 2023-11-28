@@ -23,6 +23,9 @@ The dataTest.csv is stored under the repo called beckashi/dataStore/.
 
 next, should add calibration and filter
 
+## Attentation ##
+dataTest_1123.csv uses one-page printing for data, but dataTest_1128.csv uses two pages printing.
+
 ## plan:  ##
 Week1: discuss about greyscale classifying to work. 
 
