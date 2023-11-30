@@ -1,3 +1,5 @@
+#include "motors.h"
+
 #define EMIT_PIN 11         // Documentation says 11.
 #define LS_LEFT_PIN 12      // Complete for DN1 pin
 #define LS_MIDLEFT_PIN 18   // Complete for DN2 pin
@@ -5,6 +7,7 @@
 #define LS_MIDRIGHT_PIN 21  // Complete for DN4 pin
 #define LS_RIGHT_PIN 22     // Complete for DN5 pin
 #define MAX_SAMPLES 5
+Motors_c motors;
 
 int ls_pins[5] = { LS_LEFT_PIN,
                    LS_MIDLEFT_PIN,
@@ -72,6 +75,10 @@ void loop() {
   reading_5 = (reading_5 - 585.57) / 206.37;
   Serial.print(",");
   Serial.println(reading_5);
+
+  if (reading_3 == 4.50){
+    motors.setMotorPower(0,0);
+  }
 
   return;
 
