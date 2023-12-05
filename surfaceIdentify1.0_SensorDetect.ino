@@ -27,7 +27,7 @@ int result_index;
 // FILE *fpt = fopen("SensorData.csv", "w+");
 
 void setup() {
-
+  motors.init();
   // Set some initial pin modes and states
   pinMode(EMIT_PIN, INPUT);     // Set EMIT as an input (off)
   pinMode(LS_LEFT_PIN, INPUT);  // Set line sensor pin to input
@@ -38,7 +38,7 @@ void setup() {
   float lineSensors(int number);
 
   Serial.begin(9600);
-  delay(1500);
+  delay(1000);
   Serial.println("***RESET***");
 
   for (int i = 0; i < 100; i++) {
@@ -76,8 +76,28 @@ void loop() {
   Serial.print(",");
   Serial.println(reading_5);
 
-  if (reading_3 == 4.50){
+  // Possible improvements
+  // - a combination of all 5 sensors? mean? mode？ min? max?
+  // - a stastical measure of which is more reliable? (inverse variance weighting on wikipedia)
+  // - instead of an instant decision, it could collect x samples then decide.
+  // Probably, just pick one of the above that you predict will be most effective.
+  // Try to explain how and why it might be better
+  // 
+
+  if (reading_3 >= 4.45 && reading_3 <= 4.55) { // && reading_3 <= 4.55){
     motors.setMotorPower(0,0);
+    delay(1000);
+  }else if (reading_3 >= 6.45 && reading_3 <= 6.55){
+    motors.setMotorPower(0,0);
+    delay(1000);
+  }else if (reading_3 >= 8.45 && reading_3 <= 8.55){
+    motors.setMotorPower(0,0);
+    delay(1000);
+  }else if (reading_3 >= 10.45 && reading_3 <= 10.55){
+    motors.setMotorPower(0,0);
+    delay(1000);
+  }else{
+    motors.setMotorPower(18, 18);
   }
 
   return;
