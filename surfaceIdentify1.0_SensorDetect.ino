@@ -76,13 +76,6 @@ void loop() {
   Serial.print(",");
   Serial.println(reading_5);
 
-  // Possible improvements
-  // - a combination of all 5 sensors? mean? mode？ min? max?
-  // - a stastical measure of which is more reliable? (inverse variance weighting on wikipedia)
-  // - instead of an instant decision, it could collect x samples then decide.
-  // Probably, just pick one of the above that you predict will be most effective.
-  // Try to explain how and why it might be better
-  // 
 
   if (reading_3 >= 4.45 && reading_3 <= 4.55) { // && reading_3 <= 4.55){
     motors.setMotorPower(0,0);
